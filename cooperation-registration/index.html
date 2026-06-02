@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Worldwide Recruitment Services Pvt. Ltd.</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#eef2f7;
+    color:#333;
+    padding:40px 15px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* HEADER */
+
+.header{
+    background:linear-gradient(135deg,#0f172a,#1d4ed8);
+    color:white;
+    text-align:center;
+    padding:50px 30px;
+}
+
+.company-logo{
+    width:130px;
+    height:130px;
+    object-fit:contain;
+    background:white;
+    padding:12px;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+
+.header h1{
+    font-size:34px;
+    margin-bottom:15px;
+}
+
+.header p{
+    max-width:850px;
+    margin:auto;
+    line-height:1.8;
+    opacity:0.95;
+}
+
+/* FORM */
+
+.form-container{
+    padding:40px;
+}
+
+.section-title{
+    font-size:24px;
+    color:#0f172a;
+    margin-top:40px;
+    margin-bottom:25px;
+    border-bottom:3px solid #2563eb;
+    padding-bottom:10px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.form-group{
+    margin-bottom:22px;
+}
+
+.full-width{
+    grid-column:1 / -1;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:500;
+    color:#1e293b;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+    padding:14px;
+    border:1px solid #cbd5e1;
+    border-radius:8px;
+    background:#f8fafc;
+    font-size:15px;
+    transition:0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    outline:none;
+    border-color:#2563eb;
+    background:white;
+    box-shadow:0 0 0 3px rgba(37,99,235,0.15);
+}
+
+textarea{
+    resize:vertical;
+    min-height:120px;
+}
+
+/* CHECKBOX */
+
+.checkbox-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+}
+
+.checkbox-item{
+    background:#f8fafc;
+    padding:14px;
+    border-radius:8px;
+    border:1px solid #e2e8f0;
+}
+
+.checkbox-item input{
+    width:auto;
+    margin-right:10px;
+}
+
+/* FILE UPLOAD */
+
+.file-upload{
+    border:2px dashed #94a3b8;
+    padding:25px;
+    border-radius:10px;
+    text-align:center;
+    background:#f8fafc;
+}
+
+.file-upload p{
+    margin-top:10px;
+    color:#64748b;
+    font-size:14px;
+}
+
+/* BUTTON */
+
+.submit-btn{
+    width:100%;
+    padding:18px;
+    background:linear-gradient(135deg,#2563eb,#1e40af);
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+    margin-top:30px;
+}
+
+.submit-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 20px rgba(37,99,235,0.3);
+}
+
+/* FOOTER */
+
+.footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:25px;
+    font-size:14px;
+}
+
+.footer a{
+    color:#93c5fd;
+    text-decoration:none;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .header h1{
+        font-size:28px;
+    }
+
+    .form-container{
+        padding:25px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+        <!-- PLACE YOUR LOGO IMAGE AS logo.png -->
+        <img 
+        src="logo1.jpg.jpeg" 
+        alt="Worldwide Recruitment Services Pvt. Ltd. Logo" 
+        class="company-logo">
+
+        <h1>International Recruitment B2B Partnership Form</h1>
+
+        <p>
+            Welcome to Worldwide Recruitment Services Pvt. Ltd.
+            We specialize in international recruitment partnerships, manpower solutions,
+            overseas hiring collaboration, candidate sourcing, and workforce sharing services.
+            Please complete the form below to establish a professional B2B recruitment partnership with our company.
+        </p>
+
+    </div>
+
+    <!-- FORM -->
+
+    <div class="form-container">
+
+      <form id="b2bForm" action="submit.php" method="POST" enctype="multipart/form-data">
+
+            <!-- COMPANY INFORMATION -->
+
+            <h2 class="section-title">1. Company Information</h2>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Company Name *</label>
+                    <input
+                    type="text"
+                    name="company_name"
+                    required
+                    minlength="3"
+                    maxlength="100"
+                    placeholder="Enter company name">
+                </div>
+
+                <div class="form-group">
+                    <label>Country *</label>
+                    <input
+                    type="text"
+                    name="country"
+                    required
+                    placeholder="Enter country">
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Registered Business Address *</label>
+
+                    <textarea
+                    name="address"
+                    required
+                    minlength="10"
+                    placeholder="Enter complete business address"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Company Website *</label>
+
+                    <input
+                    type="url"
+                    name="website"
+                    required
+                    placeholder="https://example.com">
+                </div>
+
+                <div class="form-group">
+                    <label>Year Established *</label>
+
+                    <input
+                    type="number"
+                    name="year_established"
+                    required
+                    min="1900"
+                    max="2026">
+                </div>
+
+                <div class="form-group">
+                    <label>Number of Employees *</label>
+
+                    <input
+                    type="number"
+                    name="employees"
+                    required
+                    min="1">
+                </div>
+
+                <div class="form-group">
+                    <label>Business Registration Number *</label>
+
+                    <input
+                    type="text"
+                    name="registration_number"
+                    required
+                    minlength="5">
+                </div>
+
+                <div class="form-group">
+                    <label>Tax / VAT Number *</label>
+
+                    <input
+                    type="text"
+                    name="tax_number"
+                    required>
+                </div>
+
+            </div>
+
+            <!-- CONTACT PERSON -->
+
+            <h2 class="section-title">2. Contact Person Details</h2>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Full Name *</label>
+
+                    <input
+                    type="text"
+                    name="fullname"
+                    required
+                    minlength="3">
+                </div>
+
+                <div class="form-group">
+                    <label>Job Title *</label>
+
+                    <input
+                    type="text"
+                    name="job_title"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address *</label>
+
+                    <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="example@company.com">
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number *</label>
+
+                    <input
+                    type="tel"
+                    name="phone"
+                    required
+                    pattern="[0-9+\-\s]{7,20}"
+                    placeholder="+977-9800000000">
+                </div>
+
+            </div>
+
+            <!-- RECRUITMENT COMPANY INFORMATION -->
+
+            <h2 class="section-title">3. Recruitment Company Information</h2>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Recruitment License Number *</label>
+
+                    <input
+                    type="text"
+                    name="license_number"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label>Years of Recruitment Experience *</label>
+
+                    <input
+                    type="number"
+                    name="experience_years"
+                    required
+                    min="1">
+                </div>
+
+                <div class="form-group">
+                    <label>Main Recruitment Industries *</label>
+
+                    <input
+                    type="text"
+                    name="industries"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label>Countries Currently Recruiting For *</label>
+
+                    <input
+                    type="text"
+                    name="recruitment_countries"
+                    required>
+                </div>
+
+            </div>
+
+            <!-- PARTNERSHIP INTEREST -->
+
+            <h2 class="section-title">4. Partnership Interests</h2>
+
+            <div class="checkbox-grid">
+
+                <label class="checkbox-item">
+                    <input type="checkbox" name="partnership[]" value="Candidate Sharing">
+                    Candidate Sharing
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" name="partnership[]" value="Joint Recruitment">
+                    Joint Recruitment
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" name="partnership[]" value="Manpower Supply">
+                    Manpower Supply
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" name="partnership[]" value="Strategic Partnership">
+                    Strategic Partnership
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" name="partnership[]" value="Overseas Hiring">
+                    Overseas Hiring
+                </label>
+
+            </div>
+
+            <!-- WORKFORCE -->
+
+            <h2 class="section-title">5. Workforce Categories</h2>
+
+            <div class="checkbox-grid">
+
+                <label class="checkbox-item">
+                    <input type="checkbox" name="workforce[]" value="Construction">
+                    Construction
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" name="workforce[]" value="Hospitality">
+                    Hospitality
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" name="workforce[]" value="Healthcare">
+                    Healthcare
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" name="workforce[]" value="IT">
+                    IT & Technology
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" name="workforce[]" value="Manufacturing">
+                    Manufacturing
+                </label>
+
+                <label class="checkbox-item">
+                    <input type="checkbox" name="workforce[]" value="Logistics">
+                    Logistics
+                </label>
+
+            </div>
+
+            <!-- BUSINESS DETAILS -->
+
+            <h2 class="section-title">6. Business Details</h2>
+
+            <div class="form-group">
+
+                <label>Main Recruitment Services *</label>
+
+                <textarea
+                name="services"
+                required
+                minlength="30"
+                placeholder="Describe your recruitment services and capabilities"></textarea>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Current International Markets *</label>
+
+                <textarea
+                name="markets"
+                required
+                minlength="20"></textarea>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>Partnership Objectives *</label>
+
+                <textarea
+                name="objectives"
+                required
+                minlength="30"></textarea>
+
+            </div>
+
+            <!-- CANDIDATE CAPACITY -->
+
+            <h2 class="section-title">7. Candidate Supply Capacity</h2>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Monthly Candidate Supply Capacity *</label>
+
+                    <input
+                    type="number"
+                    name="candidate_capacity"
+                    required
+                    min="1">
+                </div>
+
+                <div class="form-group">
+                    <label>Candidate Database Size *</label>
+
+                    <input
+                    type="number"
+                    name="database_size"
+                    required
+                    min="1">
+                </div>
+
+                <div class="form-group">
+
+                    <label>Visa Assistance *</label>
+
+                    <select name="visa_support" required>
+                        <option value="">Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Skill Testing *</label>
+
+                    <select name="skill_testing" required>
+                        <option value="">Select</option>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            
+
+            <!-- COMPLIANCE -->
+
+            <h2 class="section-title">9. International Compliance</h2>
+
+            <div class="form-group">
+
+                <label>Compliance Certifications / Government Approvals *</label>
+
+                <textarea
+                name="compliance"
+                required
+                minlength="20"></textarea>
+
+            </div>
+
+            <!-- AGREEMENTS -->
+
+            <h2 class="section-title">10. Agreement & Confirmation</h2>
+
+            <div class="form-group">
+
+                <label>
+                    <input type="checkbox" required>
+                    I confirm that all provided information is accurate and valid.
+                </label>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+                    <input type="checkbox" required>
+                    I agree to maintain confidentiality regarding recruitment data and partnership discussions.
+                </label>
+
+            </div>
+
+            <div class="form-group">
+
+                <label>
+                    <input type="checkbox" required>
+                    I confirm compliance with international labor and recruitment regulations.
+                </label>
+
+            </div>
+
+            <!-- SUBMIT -->
+
+            <button type="submit" class="submit-btn">
+                Submit Partnership Request
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        © 2026 Worldwide Recruitment Services Pvt. Ltd. All Rights Reserved.
+        <br><br>
+
+        Email:
+        <a href="mailto:wrsnepal@gmail.com">
+            wrsnepal@gmail.com
+        </a>
+
+        |
+
+        Website:
+        <a href="https://wrsnepal.com/" target="_blank">
+            wrsnepal.com
+        </a>
+
+    </div>
+
+</div>
+
+<!-- JAVASCRIPT VALIDATION -->
+<script>
+document.getElementById("b2bForm").addEventListener("submit", function(e){
+
+    const requiredCheckboxes = document.querySelectorAll('input[type="checkbox"][required]');
+
+    let allChecked = true;
+
+    requiredCheckboxes.forEach((checkbox) => {
+        if (!checkbox.checked) {
+            allChecked = false;
+        }
+    });
+
+    if (!allChecked) {
+        e.preventDefault();
+        alert("Please accept all agreement checkboxes before submitting.");
+    }
+
+});
+</script>
+
+</body>
+
+</html>
